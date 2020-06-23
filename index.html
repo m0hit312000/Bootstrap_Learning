@@ -85,9 +85,85 @@
                    <img src="img/logo.png" class="image-fluid">
                 </div>
                 <div class="col-md-3 align-self-center">
-                  <a role="button" class="btn btn-warning btn-sm btn-block font-weight-bold" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>" data-placement="bottom" href="#card-form">
+                  <a role="button" class="btn btn-warning btn-sm btn-block font-weight-bold" data-target="#resTable" data-toggle="modal">
                     Reserve Table
                   </a>
+
+                  <div class="modal fade  text-dark " id="resTable" tabindex="-1" role="dialog" aria-labelledby="reserveTable" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-titlefont-weight-bold">Reserve a Table</h4>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form class="container">
+                            <div class="form-group row">
+                               <label for="NoOfGuest" class="col-form-label col-md-3 font-weight-bold">Number of Guests</label>
+                               <div class="col col-md-9">
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline1">1</label>
+                                  </div>
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline2">2</label>
+                                  </div>
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline1">3</label>
+                                  </div>
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline2">4</label>
+                                  </div>
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline1">5</label>
+                                  </div>
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline2">6</label>
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="form-group row" >
+                              <label for="sec" class="col-form-label col-md-3 font-weight-bold">Section</label>
+                              <div class="btn-group btn-group-toggle" data-toggle="buttons"> 
+                               <label class="btn btn-success btn-sm font-weight-bold active">
+                                 <input type="radio" name="options" id="option1" autocomplete="off" checked>
+                                   Non-Smoking
+                                 </label>
+                                 <label class="btn btn-danger btn-sm font-weight-bold">
+                                 <input type="radio"  name="options" id="option2" autocomplete="off">
+                                  Smoking
+                                 </label>
+                              </div> 
+                            </div>
+                            <div class="form-group row">
+                              <label for="DateandTime" class="col-md-3 font-weight-bold">Date and Time</label>
+                              <div class="col-12 col-md-4">
+                                <input type="text" class="form-control" id="date" name="date" placeholder="Date">
+                              </div>
+                              <div class="col-12 col-md-4">
+                                <input type="text" class="form-control" id="time" name="time" placeholder="Time">
+                              </div>
+                            </div>
+                            <div class="form-group row  container offset-md-3">
+                                <button type="submit" class="btn btn-secondary btn-sm font-weight-bold col-5 col-md-2 mr-1" data-dismiss="modal">
+                                  Cancel
+                                </button>
+                                <button type="submit" class="btn btn-primary btn-sm font-weight-bold col-5 col-md-3 ml-1">
+                                  Reserve
+                                </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div> 
+                  </div>
                 </div>
             </div>
         </div>
@@ -183,61 +259,7 @@
             </div>
         </div>
     </div>
-    <div class="container row row-content  justify-content-center">
-      <div class="col-12 col-md-8 ">
-         <div id="card-form" class="card">
-           <h3 class="card-header bg-warning text-white font-weight-bold">Reserve a Table</h3>
-           <form class="pt-4 container">
-                <div class="form-group row">
-                  <label for="NoOfGuest" class="col-form-label col-md-2 font-weight-bold">Number of Guests</label>
-                   <div class="col col-md-6">
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline1">1</label>
-                      </div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline2">2</label>
-                      </div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline1">3</label>
-                      </div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline2">4</label>
-                      </div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline1">5</label>
-                      </div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline2">6</label>
-                      </div>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="DateandTime" class="col-md-2 font-weight-bold">Date and Time</label>
-                  <div class="col-12 col-md-3">
-                    <input type="text" class="form-control" id="date" name="date" placeholder="Date">
-                  </div>
-                  <div class="col-12 col-md-3">
-                    <input type="text" class="form-control" id="time" name="time" placeholder="Time">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-12 offset-md-2 col-md-4">
-                    <button type="submit" class="btn btn-primary font-weight-bold">
-                      Reserve
-                    </button>
-                  </div>
-                </div>
-           </form>
-         </div> 
-      </div>
-    </div> 
-
+    
     <footer class="footer">
         <div class="container">
             <div class="row">             
@@ -284,11 +306,7 @@
    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-   <script>
-     $(document).ready(function(){
-       $('[data-toggle="tooltip"]').tooltip();
-     });
-   </script>
+   
 
 </body>
 
