@@ -108,30 +108,30 @@
                                     <label class="custom-control-label" for="customRadioInline1">1</label>
                                   </div>
                                   <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                    <input type="radio" id="customRadioInline2" name="customRadioInline2" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadioInline2">2</label>
                                   </div>
                                   <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadioInline1">3</label>
+                                    <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline3">3</label>
                                   </div>
                                   <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadioInline2">4</label>
+                                    <input type="radio" id="customRadioInline4" name="customRadioInline4" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline4">4</label>
                                   </div>
                                   <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadioInline1">5</label>
+                                    <input type="radio" id="customRadioInline5" name="customRadioInline5" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline5">5</label>
                                   </div>
                                   <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadioInline2">6</label>
+                                    <input type="radio" id="customRadioInline6" name="customRadioInline6" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline6">6</label>
                                   </div>
                                </div>
                             </div>
                             <div class="form-group row" >
                               <label for="sec" class="col-form-label col-md-3 font-weight-bold">Section</label>
-                              <div class="btn-group btn-group-toggle" data-toggle="buttons"> 
+                              <div class="btn-group btn-group-toggle col-md-5 col-auto" data-toggle="buttons"> 
                                <label class="btn btn-success btn-sm font-weight-bold active">
                                  <input type="radio" name="options" id="option1" autocomplete="off" checked>
                                    Non-Smoking
@@ -151,7 +151,7 @@
                                 <input type="text" class="form-control" id="time" name="time" placeholder="Time">
                               </div>
                             </div>
-                            <div class="form-group row  container offset-md-3">
+                            <div class="form-group row offset-md-3 container">
                                 <button type="submit" class="btn btn-secondary btn-sm font-weight-bold col-5 col-md-2 mr-1" data-dismiss="modal">
                                   Cancel
                                 </button>
@@ -203,11 +203,19 @@
                     <li data-target="#mycarousel" data-slide-to="2"></li>
                  </ol>
                  <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon"></span>
-              </a>
-              <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon"></span>
-              </a>
+                   <span class="carousel-control-prev-icon"></span>
+                 </a>
+                 <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                   <span class="carousel-control-next-icon"></span>
+                 </a>
+                 <div class="btn-group" id="carouselButton">
+                   <button class="btn btn-danger btn-sm" id="carousel-pause">
+                     <span class="fa fa-pause"></span>
+                   </button>
+                   <button class="btn btn-danger btn-sm" id="carousel-play">
+                    <span class="fa fa-play"></span>
+                   </button>  
+                  </div>
               </div>
            </div>
         </div>
@@ -306,7 +314,17 @@
    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-   
+   <script>
+     $(document).ready(function(){
+       $('#mycarousel').carousel({interval:2000});
+       $('#carousel-pause').click(function(){
+         $('#mycarousel').carousel('pause');
+       });
+       $('#carousel-play').click(function(){
+         $('#mycarousel').carousel('cycle');
+       }); 
+     });
+   </script>   
 
 </body>
 
