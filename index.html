@@ -29,7 +29,7 @@
                 <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
             </ul> 
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal">
+                <a id="modalButton">
                   <span class="fa fa-sign-in"></span> LogIn
                 </a> 
             </span> 
@@ -41,8 +41,8 @@
        <div class="modal-dialog modal-lg" role="content">
          <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Login</h4>
-              <button type="button" class="close" data-dismiss="modal">
+              <h4 class="modal-title font-weight-bold">Login</h4>
+              <button type="button" class="close" id="closeButton">
                  &times;
               </button>
             </div>
@@ -60,12 +60,12 @@
                     <div class="col-sm-auto">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox">
-                            <label class="form-check-label"> Remember me</label>
+                            <label class="form-check-label text-dark"> Remember me</label>
                         </div>
                     </div>
                 </div>
                 <div class="form-row">
-                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                    <button type="button" id="closeButton2" class="btn btn-secondary btn-sm ml-auto">Cancel</button>
                     <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                 </div>
               </form> 
@@ -85,7 +85,7 @@
                    <img src="img/logo.png" class="image-fluid">
                 </div>
                 <div class="col-md-3 align-self-center">
-                  <a role="button" class="btn btn-warning btn-sm btn-block font-weight-bold" data-target="#resTable" data-toggle="modal">
+                  <a id="resBut" role="button" class="btn btn-warning btn-sm btn-block font-weight-bold">
                     Reserve Table
                   </a>
 
@@ -94,43 +94,43 @@
                       <div class="modal-content">
                         <div class="modal-header">
                           <h4 class="modal-titlefont-weight-bold">Reserve a Table</h4>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <button type="button" class="close" id="closeButton3" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
                           <form class="container">
                             <div class="form-group row">
-                               <label for="NoOfGuest" class="col-form-label col-md-3 font-weight-bold">Number of Guests</label>
+                               <label for="NoOfGuest" class="col-form-label text-dark col-md-3 font-weight-bold">Number of Guests</label>
                                <div class="col col-md-9">
                                   <div class="custom-control custom-radio custom-control-inline">
                                     <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadioInline1">1</label>
+                                    <label class="custom-control-label text-dark" for="customRadioInline1">1</label>
                                   </div>
                                   <div class="custom-control custom-radio custom-control-inline">
                                     <input type="radio" id="customRadioInline2" name="customRadioInline2" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadioInline2">2</label>
+                                    <label class="custom-control-label text-dark" for="customRadioInline2">2</label>
                                   </div>
                                   <div class="custom-control custom-radio custom-control-inline">
                                     <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadioInline3">3</label>
+                                    <label class="custom-control-label text-dark" for="customRadioInline3">3</label>
                                   </div>
                                   <div class="custom-control custom-radio custom-control-inline">
                                     <input type="radio" id="customRadioInline4" name="customRadioInline4" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadioInline4">4</label>
+                                    <label class="custom-control-label text-dark" for="customRadioInline4">4</label>
                                   </div>
                                   <div class="custom-control custom-radio custom-control-inline">
                                     <input type="radio" id="customRadioInline5" name="customRadioInline5" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadioInline5">5</label>
+                                    <label class="custom-control-label text-dark" for="customRadioInline5">5</label>
                                   </div>
                                   <div class="custom-control custom-radio custom-control-inline">
                                     <input type="radio" id="customRadioInline6" name="customRadioInline6" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadioInline6">6</label>
+                                    <label class="custom-control-label text-dark" for="customRadioInline6">6</label>
                                   </div>
                                </div>
                             </div>
                             <div class="form-group row" >
-                              <label for="sec" class="col-form-label col-md-3 font-weight-bold">Section</label>
+                              <label for="sec" class="col-form-label text-dark col-md-3 font-weight-bold">Section</label>
                               <div class="btn-group btn-group-toggle col-md-5 col-auto" data-toggle="buttons"> 
                                <label class="btn btn-success btn-sm font-weight-bold active">
                                  <input type="radio" name="options" id="option1" autocomplete="off" checked>
@@ -143,7 +143,7 @@
                               </div> 
                             </div>
                             <div class="form-group row">
-                              <label for="DateandTime" class="col-md-3 font-weight-bold">Date and Time</label>
+                              <label for="DateandTime" class="col-md-3 text-dark font-weight-bold">Date and Time</label>
                               <div class="col-12 col-md-4">
                                 <input type="text" class="form-control" id="date" name="date" placeholder="Date">
                               </div>
@@ -152,7 +152,7 @@
                               </div>
                             </div>
                             <div class="form-group row offset-md-3 container">
-                                <button type="submit" class="btn btn-secondary btn-sm font-weight-bold col-5 col-md-2 mr-1" data-dismiss="modal">
+                                <button type="submit" class="btn btn-secondary btn-sm font-weight-bold col-5 col-md-2 mr-1" id="closeButton4">
                                   Cancel
                                 </button>
                                 <button type="submit" class="btn btn-primary btn-sm font-weight-bold col-5 col-md-3 ml-1">
@@ -311,7 +311,7 @@
    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
    <script>
      $(document).ready(function(){
-       $('#mycarousel').carousel({interval:2000});
+        $('#mycarousel').carousel({interval:2000});
         $("#carouselButton").click(function()
         {
          if ($("#carouselButton").children("span").hasClass('fa-pause')) 
@@ -326,6 +326,24 @@
             $("#carouselButton").children("span").removeClass('fa-play');
             $("#carouselButton").children("span").addClass('fa-pause');                    
          }
+        });
+        $("#modalButton").click(function(){
+             $("#loginModal").modal("show");                                                                 
+        });
+        $("#closeButton").click(function(){
+             $("#loginModal").modal("hide");                                                                 
+        }); 
+        $("#closeButton2").click(function(){
+             $("#loginModal").modal("hide");                                                                 
+        });
+        $("#resBut").click(function(){
+             $("#resTable").modal("show");                                                                 
+        }); 
+        $("#closeButton3").click(function(){
+             $("#resTable").modal("hide");                                                                 
+        });
+        $("#closeButton4").click(function(){
+             $("#resTable").modal("hide");                                                                 
         });
      });
    </script>   
